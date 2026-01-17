@@ -15,9 +15,10 @@ with app.app_context():
         ]
         db.session.add_all(users)
         db.session.commit()
-        print("Users seeded")
+        print("✅ [SEED] Users table populated: 4 users added (alice, bob, superadmin, admin)")
     else:
-        print("Users already exist")
+        count = User.query.count()
+        print(f"ℹ️  [SEED] Users already exist in database ({count} users found). Skipping seed.")
 
     # ensure plans exist
     plans = Plan.query.all()

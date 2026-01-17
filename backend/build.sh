@@ -15,12 +15,23 @@ pip install -r requirements.txt
 pip install gunicorn==21.2.0
 
 # Run database migrations if needed
+echo "========================================="
 echo "Running database migrations..."
-python migrate_db.py || true
+echo "========================================="
+python migrate_db.py || echo "⚠️  Migrations skipped (may already exist)"
 
 # Seed the database
+echo ""
+echo "========================================="
 echo "Seeding database with initial data..."
-python seed.py || echo "Plans already seeded or seed.py failed"
-python seed_more.py || echo "Additional seeds already applied or seed_more.py failed"
-
-echo "Build completed successfully!"
+echo "========================================="
+echo ""
+python seed.py
+echo "✅ seed.py execution complete"
+echo ""
+python seed_more.py
+echo "✅ seed_more.py execution complete"
+echo ""
+echo "========================================="
+echo "✅ Build completed successfully!"
+echo "========================================="

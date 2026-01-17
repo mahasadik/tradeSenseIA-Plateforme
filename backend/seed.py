@@ -10,6 +10,7 @@ with app.app_context():
             Plan(name="Elite", price_dh=799, starting_balance=20000.0),
         ])
         db.session.commit()
-        print("Seed OK")
+        print("✅ [SEED] Plans table populated: 3 plans added (Starter, Pro, Elite)")
     else:
-        print("Plans already exist")
+        count = Plan.query.count()
+        print(f"ℹ️  [SEED] Plans already exist in database ({count} plans found). Skipping seed.")
