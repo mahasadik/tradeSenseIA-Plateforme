@@ -3,7 +3,7 @@ export const fr = {
     nav: {
         trading: 'Trading IA',
         news: 'Actualités',
-        leaderboard: 'Classement',
+        leaderboard: 'Classement & Tarif',
         community: 'Communauté',
         masterclass: 'MasterClass',
         features: 'Fonctionnalités',

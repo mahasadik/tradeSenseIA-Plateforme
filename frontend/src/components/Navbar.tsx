@@ -15,7 +15,7 @@ const Navbar = () => {
     { name: t('nav.trading'), href: "#trading" },
     { name: t('nav.news'), href: "#news" },
     { name: t('nav.leaderboard'), href: "#leaderboard" },
-    { name: t('nav.community & trif'), href: "#community" },
+    { name: t('nav.community'), href: "#community" },
     { name: t('nav.masterclass'), href: "#masterclass" },
   ];
 
